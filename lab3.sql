@@ -1,3 +1,5 @@
+select * from student
+
 --q2.1
 insert into student(s_email,s_name,major)
 values('s1@jmu.edu','s1','IA');
