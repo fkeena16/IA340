@@ -45,3 +45,5 @@ select * from course;
 select c_number,count(*) as num_student
 from enroll
 group by c_number
+order by num_student desc
+limit 1
