@@ -32,9 +32,16 @@ select * from course;
 
 --q2.5 changes added above ^, we have to modify the professor table first, because the course table utilizes data from the professor table, such as professor email and professor name
 --q2.6 we need to update the course table first because if we do professor table first, it will still show p1 in course table
-update course
-set p_email = 'p3@jmu.edu'
-where p_email = 'p1@jmu.edu';
+--update course
+--set p_email = 'p3@jmu.edu'
+--where p_email = 'p1@jmu.edu';
 
-delete from professor
-where p_email = 'p1@jmu.edu'
+--delete from professor
+--where p_email = 'p1@jmu.edu'
+
+--2.7
+--select * from enroll
+--2.8
+select c_number,count(*) as num_student
+from enroll
+group by c_number
