@@ -60,4 +60,4 @@ from professor
 inner join course on professor.p_email = course.p_email
 group by professor.p_name
 order by num_courses_taught desc
-limit 1
+limit 1;
