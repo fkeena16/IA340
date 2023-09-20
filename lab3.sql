@@ -47,3 +47,17 @@ from enroll
 group by c_number
 order by num_student desc
 limit 1
+
+--2.9
+select professor.p_name, course.c_name
+from professor
+inner join course
+on professor.p_email = course.p_email
+
+--2.10
+select professor.p_name, COUNT(course.c_number) AS num_courses_taught
+from professor
+inner join course on professor.p_email = course.p_email
+group by professor.p_name
+order by num_courses_taught desc
+limit 1
